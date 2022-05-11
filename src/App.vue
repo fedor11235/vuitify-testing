@@ -1,19 +1,25 @@
 <template>
   <v-app>
-    <v-content>
-      <ButtonIcons/>
-    </v-content>
+    <NavbarTool/>
+    <v-main class="px-4 pb-4 grey">
+      <!-- <router-view></router-view> -->
+      <MyTeam />
+      
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import ButtonIcons from './components/ButtonIcons';
+import NavbarTool from './components/NavbarTool';
+// import DashBoard from "./views/DashBoard"
+import MyTeam from "./views/MyTeam"
 
 export default {
   name: 'App',
 
   components: {
-    ButtonIcons,
+    NavbarTool,
+    MyTeam,
   },
 
   data: () => ({
