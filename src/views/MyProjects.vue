@@ -53,46 +53,24 @@
     </v-container> -->
 
     <v-container class="my-5">
-      <v-expansion-panel>
-        <v-expansion-panel-content
-          v-for="(item, i) in 5" 
-          :key="i"
-        >
-          <template v-slot:activator="{ on }">
-            <div v-on="on">project title</div>
-          </template>
-          <v-card>
-            <v-card-text>
-              <div class="font-weight-bold">due by xx.xx.xx</div>
-              <div>info</div>
-            </v-card-text>
-          </v-card>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
+      <v-expansion-panels>
+        <v-expansion-panel v-for="(item, i) in 5" :key="i">
+          <v-expansion-panel-header> Item </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
     </v-container>
-
-    <v-container class="my-5">
-      <v-expansion-panel>
-        <v-expansion-panel-content>
-          <template v-slot:activator="{ on }">
-            <div v-on="on">project title</div>
-          </template>
-          <v-card>
-            <v-card-text>
-              <div class="font-weight-bold">due by xx.xx.xx</div>
-              <div>info</div>
-            </v-card-text>
-          </v-card>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-container>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MyProjects',
+  name: "MyProjects",
 
   data: () => ({
     //

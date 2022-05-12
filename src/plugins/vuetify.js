@@ -6,9 +6,13 @@ Vue.use(Vuetify);
 export default new Vuetify({
     iconfont: "md",
     theme: {
-        primary: "#9652ff",
-        success: "#3cd1c2",
-        info: "#ffaadc",
-        error: "#f83e70",
-    },
+        themes: {
+          light: {
+            primary: '#123456',
+            secondary: '#b0bec5',
+            accent: '#8c9eff',
+            error: '#b71c1c',
+          },
+        },
+      },
 });

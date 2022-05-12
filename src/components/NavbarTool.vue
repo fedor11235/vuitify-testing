@@ -12,27 +12,7 @@
 
           <v-spacer></v-spacer>
 
-          <v-menu offset-y>
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                color="grey"
-                text
-                v-bind="attrs"
-                v-on="on"
-              >
-                <v-icon left>mdi-plus</v-icon>
-                <span>Menu</span>
-              </v-btn>
-            </template>
-            <v-list>
-              <v-list-item
-                v-for="(item, index) in links"
-                :key="index"
-              >
-                <v-list-item-title>{{ item.text }}</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+     
 
           <v-btn text color="grey">
             <span>Sign Out</span>
@@ -80,7 +60,11 @@ export default {
         {icon:"dashboard", text:"Dashboard", route:"/"},
         {icon:"folder", text:"My Project", route:"/projects"},
         {icon:"person", text:"Team", route:"/team"},
-      ]
+      ],
+      date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+      menu: false,
+      modal: false,
+      menu2: false,
     }
   },
 };
